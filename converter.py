@@ -51,6 +51,7 @@ key_csv_typo_end = 'End_Typology'
 key_csv_h = 'Height'
 key_csv_material = 'Material'
 key_csv_architect = 'Architect'
+key_csv_patron = 'Patron'
 key_csv_owner = 'Owner'
 key_csv_owner_start = 'Start_Owner'
 key_csv_owner_end = 'End_Owner'
@@ -81,10 +82,12 @@ key_uri_dimension = 'dimension'
 key_uri_measurement_unit = 'measurement_unit'
 key_uri_material = 'material'
 key_uri_architect = 'architect'
+key_uri_patron = 'patron'
 
 key_uri_owner = 'owner'
 key_uri_acquisition = 'acquisition'
 key_uri_tenant = 'tenant'
+key_uri_transfer = 'transfer_of_custody'
 
 key_uri_type_island = 'Island'
 key_uri_type_bw = 'Built Work'
@@ -98,6 +101,7 @@ key_cat_h = 'Height'
 key_cat_mt = 'Meters(??)'
 key_cat_material = 'Material'
 key_cat_architect = 'Architect'
+key_cat_patron = 'Patron'
 ket_cat_owner = 'Owner'
 key_cat_tenant = 'Tenant'
 
@@ -163,6 +167,11 @@ def _add_bw(g, data):
     bw_owner_acquisition_uri = f'{bw_uri}/{key_uri_acquisition}/{_id()}'
     bw_owner_acquisition_time_uri = f'{bw_owner_acquisition_uri}/{key_uri_time}/{_id()}'
 
+    # tenant
+    bw_tenant_uri = f'{bw_uri}/{key_uri_tenant}/{_id()}'
+    bw_tenant_transfer_uri = f'{bw_uri}/{key_uri_transfer}/{_id()}'
+    bw_tenant_transfer_time_uri = f'{bw_tenant_transfer_uri}/{key_uri_time}/{_id()}'
+
     # Nodes
     bw_node = URIRef(bw_uri)
     bw_id_node = URIRef(bw_id_uri)
@@ -211,6 +220,10 @@ def _add_bw(g, data):
     bw_owner_node = URIRef(bw_owner_uri)
     bw_owner_acquisition_node = URIRef(bw_owner_acquisition_uri)
     bw_owner_acquisition_time_node = URIRef(bw_owner_acquisition_time_uri)
+
+    bw_tenant_node = URIRef(bw_tenant_uri)
+    bw_tenant_transfer_node = URIRef(bw_tenant_transfer_uri)
+    bw_tenant_transfer_time_node = URIRef(bw_tenant_transfer_time_uri)
 
     # bw
     g.add( (bw_node, RDF.type, crm['E22_Man-made_Object']) )
@@ -388,9 +401,33 @@ def _add_bw(g, data):
         g.add( (bw_owner_node, RDF.type, crm.E39_Actor) )
         g.add( (bw_owner_node, RDFS.label, Literal(data[key_csv_owner], datatype=XSD.string)) )
 
-        g.add( (bw_owner_acquisition_time_node, RDF.type, Literal(crm[E52_Time], datatype=XSD.string)) )
-        g.add( (bw_owner_acquisition_time_node, crm.p82a_begin_of_the_begin, Literal(data[key_csv_owner_start], datatype=XSD.string))  )
-        g.add( (bw_owner_acquisition_time_node, crm.p82b_end_of_the_end, Literal(data[key_csv_owner_end], datatype=XSD.string)) )
+        g.add( (bw_owner_acquisition_time_node, RDF.type, crm[E52_Time]) )
+
+        if not pd.isnull(data[key_csv_owner_start]):
+            g.add( (bw_owner_acquisition_time_node, crm.p82a_begin_of_the_begin, Literal(data[key_csv_owner_start], datatype=XSD.dateTime))  )
+        
+        if not pd.isnull(data[key_csv_owner_end]):
+            g.add( (bw_owner_acquisition_time_node, crm.p82b_end_of_the_end, Literal(data[key_csv_owner_end], datatype=XSD.dateTime)) )
+
+    # Tenant
+    if not pd.isnull(data[key_csv_tenant]):
+
+        g.add( (bw_node, crm.p30i_custody_transferred_through, bw_tenant_transfer_node) )
+        g.add( (bw_tenant_transfer_node, RDF.type, crm.E10_Transfer_of_Custody) )
+        g.add( (bw_tenant_transfer_node, crm.p29_custody_received_by, bw_tenant_node) )
+        g.add( (bw_tenant_transfer_node, crm[p4_has_time], bw_tenant_transfer_time_node) )
+
+        g.add( (bw_tenant_node, RDF.type, crm.E39_Actor) )
+        g.add( (bw_tenant_node, RDFS.label, Literal(data[key_csv_tenant], datatype=XSD.string)) )
+
+        g.add( (bw_tenant_transfer_time_node, RDF.type, crm[E52_Time]) )
+        
+        if not pd.isnull(data[key_csv_tenant_start]):
+            g.add( (bw_tenant_transfer_time_node, crm.p82a_begin_of_the_begin, Literal(data[key_csv_tenant_start], datatype=XSD.dateTime)) )
+        
+        if not pd.isnull(data[key_csv_tenant_end]):
+            g.add( (bw_tenant_transfer_time_node, crm.p82b_end_of_the_end, Literal(data[key_csv_tenant_end] , datatype=XSD.dateTime)) )
+
 
     return g
 

@@ -4,128 +4,128 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K> a crm:E22_Man-made_Object ;
-    crm:P2_has_type <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/type/YMCDXCPF> ;
-    crm:P53_has_former_or_current_location <https://archipelago.itatti.harvard.edu/resource/Island/ZXEDHPPA> ;
-    crm:p108i_was_produced_by <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/construction/ERARHYRP> ;
-    crm:p12_was_present_at <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/function/TWQ7E3KN>,
-        <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/typology_end/9S4QDVDK>,
-        <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/typology_start/ES2C5A6B>,
-        <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/use_end/P34X98SG>,
-        <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/use_start/PKRB8JK4> ;
-    crm:p13i_was_destroyed_by <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/destruction/A9F7X4RP> ;
-    crm:p1_is_identified_by <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/identifier/Z8Y4TPJT>,
-        <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/preferred_name/GGMPSWUQ> ;
-    crm:p24i_changed_ownership_through <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/acquisition/3NRDLWAN> ;
-    crm:p45_consist_of <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/material/JLPKRPPJ>,
-        <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/material/TY89ASKT> .
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG> a crm:E22_Man-made_Object ;
+    crm:P2_has_type <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/type/UJQ9WSJA> ;
+    crm:P53_has_former_or_current_location <https://archipelago.itatti.harvard.edu/resource/Island/2AQHQ7RC> ;
+    crm:p108i_was_produced_by <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/construction/UWRBRMQL> ;
+    crm:p12_was_present_at <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/function/BVUG68F9>,
+        <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/typology_end/Z9XHTQCP>,
+        <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/typology_start/YSNUAMUT>,
+        <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/use_end/YEZTY3JJ>,
+        <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/use_start/SDBX7RYZ> ;
+    crm:p13i_was_destroyed_by <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/destruction/9B4EVXS2> ;
+    crm:p1_is_identified_by <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/identifier/3HFGBQFG>,
+        <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/preferred_name/SPM29B36> ;
+    crm:p24i_changed_ownership_through <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/acquisition/MV56YN9H> ;
+    crm:p45_consist_of <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/material/KWFES97S>,
+        <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/material/NE22SZ56> .
 
-<https://archipelago.itatti.harvard.edu/resource/Island/ZXEDHPPA> a crm:E53_Place ;
-    crm:p1_is_identified_by <https://archipelago.itatti.harvard.edu/resource/Island/ZXEDHPPA/identifier/M3ZU7QUT> .
+<https://archipelago.itatti.harvard.edu/resource/Island/2AQHQ7RC> a crm:E53_Place ;
+    crm:p1_is_identified_by <https://archipelago.itatti.harvard.edu/resource/Island/2AQHQ7RC/identifier/4W6WM46T> .
 
-<https://archipelago.itatti.harvard.edu/resource/Island/ZXEDHPPA/identifier/M3ZU7QUT> a crm:E41_Appellation ;
+<https://archipelago.itatti.harvard.edu/resource/Island/2AQHQ7RC/identifier/4W6WM46T> a crm:E41_Appellation ;
     rdfs:label "San Secondo"^^xsd:string .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/acquisition/3NRDLWAN> a crm:E8_Acquisition ;
-    crm:p22_transferred_title_to <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/owner/UKP9XP7D> ;
-    crm:p4_has_time-span <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/acquisition/3NRDLWAN/timespan/V5NY7EDT> .
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/acquisition/MV56YN9H> a crm:E8_Acquisition ;
+    crm:p22_transferred_title_to <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/owner/SVYJVTLH> ;
+    crm:p4_has_time-span <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/acquisition/MV56YN9H/timespan/QF44M24T> .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/acquisition/3NRDLWAN/timespan/V5NY7EDT> a "http://www.cidoc-crm.org/cidoc-crm/E52_Time-span"^^xsd:string ;
-    crm:p82a_begin_of_the_begin "1500-01-01"^^xsd:string ;
-    crm:p82b_end_of_the_end "1531-12-31"^^xsd:string .
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/acquisition/MV56YN9H/timespan/QF44M24T> a crm:E52_Time-span ;
+    crm:p82a_begin_of_the_begin "1500-01-01"^^xsd:dateTime ;
+    crm:p82b_end_of_the_end "1531-12-31"^^xsd:dateTime .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/construction/ERARHYRP> a crm:E12_Production ;
-    crm:p2_has_type <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/construction/ERARHYRP/type/VDSDSENV> ;
-    crm:p4_has_time-span <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/construction/ERARHYRP/timespan/F5DKLVYS> .
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/construction/UWRBRMQL> a crm:E12_Production ;
+    crm:p2_has_type <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/construction/UWRBRMQL/type/L496KYZH> ;
+    crm:p4_has_time-span <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/construction/UWRBRMQL/timespan/QMQUXPJ3> .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/construction/ERARHYRP/timespan/F5DKLVYS> a crm:E52_Time-span ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/construction/UWRBRMQL/timespan/QMQUXPJ3> a crm:E52_Time-span ;
     crm:p82a_begin_of_the_begin "1500-01-01"^^xsd:date .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/construction/ERARHYRP/type/VDSDSENV> a crm:E55_Type ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/construction/UWRBRMQL/type/L496KYZH> a crm:E55_Type ;
     rdfs:label "Construction"^^xsd:string .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/destruction/A9F7X4RP> a crm:E6_Destruction ;
-    crm:p4_has_time-span <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/destruction/A9F7X4RP/timespan/8AU7PTFB> .
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/destruction/9B4EVXS2> a crm:E6_Destruction ;
+    crm:p4_has_time-span <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/destruction/9B4EVXS2/timespan/NN9B2ZR9> .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/destruction/A9F7X4RP/timespan/8AU7PTFB> a crm:E52_Time-span ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/destruction/9B4EVXS2/timespan/NN9B2ZR9> a crm:E52_Time-span ;
     crm:p82b_end_of_the_end "1607-12-31"^^xsd:date .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/function/TWQ7E3KN> a crm:E5_Event ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/function/BVUG68F9> a crm:E5_Event ;
     rdfs:label "Private"^^xsd:string ;
-    crm:p2_has_type <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/function/TWQ7E3KN/type/HUAGP4U3> ;
-    crm:p4_has_time-span <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/function/TWQ7E3KN/timespan/EV99C952> .
+    crm:p2_has_type <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/function/BVUG68F9/type/D7WFGMN9> ;
+    crm:p4_has_time-span <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/function/BVUG68F9/timespan/J6DJVCQ6> .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/function/TWQ7E3KN/timespan/EV99C952> a crm:E52_Time-span ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/function/BVUG68F9/timespan/J6DJVCQ6> a crm:E52_Time-span ;
     crm:p82a_begin_of_the_begin "1500-01-01"^^xsd:date ;
     crm:p82b_end_of_the_end "1607-12-31"^^xsd:date .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/function/TWQ7E3KN/type/HUAGP4U3> a crm:E55_Type ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/function/BVUG68F9/type/D7WFGMN9> a crm:E55_Type ;
     rdfs:label "Function"^^xsd:string .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/identifier/Z8Y4TPJT> a crm:E42_Identifier ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/identifier/3HFGBQFG> a crm:E42_Identifier ;
     rdfs:label "SS_BLDG_035"^^xsd:string .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/material/JLPKRPPJ> a crm:E57_Material ;
-    rdfs:label "Bricks"^^xsd:string .
-
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/material/TY89ASKT> a crm:E57_Material ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/material/KWFES97S> a crm:E57_Material ;
     rdfs:label "Stone"^^xsd:string .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/owner/UKP9XP7D> a crm:E39_Actor ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/material/NE22SZ56> a crm:E57_Material ;
+    rdfs:label "Bricks"^^xsd:string .
+
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/owner/SVYJVTLH> a crm:E39_Actor ;
     rdfs:label "Benedectine nuns of San Secondo"^^xsd:string .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/preferred_name/GGMPSWUQ> a crm:E41_Appellation ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/preferred_name/SPM29B36> a crm:E41_Appellation ;
     rdfs:label "Chiesa"^^xsd:string ;
-    crm:p2_has_type <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/preferred_name/GGMPSWUQ/type/BD4XGQZU> .
+    crm:p2_has_type <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/preferred_name/SPM29B36/type/7BCRCFVJ> .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/preferred_name/GGMPSWUQ/type/BD4XGQZU> a crm:E55_Type ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/preferred_name/SPM29B36/type/7BCRCFVJ> a crm:E55_Type ;
     rdfs:label "Preferred Name"^^xsd:string .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/type/YMCDXCPF> a crm:E55_Type ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/type/UJQ9WSJA> a crm:E55_Type ;
     rdfs:label "Built Work"^^xsd:string .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/typology_end/9S4QDVDK> a crm:E5_Event ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/typology_end/Z9XHTQCP> a crm:E5_Event ;
     rdfs:label "Church"^^xsd:string ;
-    crm:p2_has_type <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/typology_end/9S4QDVDK/type/D7P35RJS> ;
-    crm:p4_has_time-span <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/typology_end/9S4QDVDK/timespan/939JM53R> .
+    crm:p2_has_type <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/typology_end/Z9XHTQCP/type/RYSFJAFE> ;
+    crm:p4_has_time-span <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/typology_end/Z9XHTQCP/timespan/JGKY6G6C> .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/typology_end/9S4QDVDK/timespan/939JM53R> a crm:E52_Time-span ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/typology_end/Z9XHTQCP/timespan/JGKY6G6C> a crm:E52_Time-span ;
     crm:p82b_end_of_the_end "1607-12-31"^^xsd:date .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/typology_end/9S4QDVDK/type/D7P35RJS> a crm:E55_Type ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/typology_end/Z9XHTQCP/type/RYSFJAFE> a crm:E55_Type ;
     rdfs:label "End Typology"^^xsd:string .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/typology_start/ES2C5A6B> a crm:E5_Event ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/typology_start/YSNUAMUT> a crm:E5_Event ;
     rdfs:label "Church"^^xsd:string ;
-    crm:p2_has_type <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/typology_start/ES2C5A6B/type/UJKQLTHA> ;
-    crm:p4_has_time-span <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/typology_start/ES2C5A6B/timespan/AGW99U75> .
+    crm:p2_has_type <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/typology_start/YSNUAMUT/type/8UW47EEW> ;
+    crm:p4_has_time-span <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/typology_start/YSNUAMUT/timespan/79KNMAJP> .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/typology_start/ES2C5A6B/timespan/AGW99U75> a crm:E52_Time-span ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/typology_start/YSNUAMUT/timespan/79KNMAJP> a crm:E52_Time-span ;
     crm:p82a_begin_of_the_begin "1500-01-01"^^xsd:date .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/typology_start/ES2C5A6B/type/UJKQLTHA> a crm:E55_Type ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/typology_start/YSNUAMUT/type/8UW47EEW> a crm:E55_Type ;
     rdfs:label "Start Typology"^^xsd:string .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/use_end/P34X98SG/type/JRH9JUX5> a crm:E52_Time-span ;
-    crm:p82b_end_of_the_end "1607-12-31"^^xsd:date .
-
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/use_end/P34X98SG/type/R5RGV2PZ> a crm:E55_Type ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/use_end/YEZTY3JJ/type/NULQ95GA> a crm:E55_Type ;
     rdfs:label "End Use"^^xsd:date .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/use_start/PKRB8JK4> a crm:E5_Event ;
-    rdfs:label "Religious"^^xsd:string ;
-    crm:p134i_was_continued_by <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/use_end/P34X98SG> ;
-    crm:p2_has_type <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/use_start/PKRB8JK4/type/SV29QZ5P> ;
-    crm:p4_has_time-span <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/use_start/PKRB8JK4/timespan/SWXD2PGQ> .
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/use_end/YEZTY3JJ/type/VJEJNLB8> a crm:E52_Time-span ;
+    crm:p82b_end_of_the_end "1607-12-31"^^xsd:date .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/use_start/PKRB8JK4/timespan/SWXD2PGQ> a crm:E52_Time-span ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/use_start/SDBX7RYZ> a crm:E5_Event ;
+    rdfs:label "Religious"^^xsd:string ;
+    crm:p134i_was_continued_by <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/use_end/YEZTY3JJ> ;
+    crm:p2_has_type <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/use_start/SDBX7RYZ/type/357WVC38> ;
+    crm:p4_has_time-span <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/use_start/SDBX7RYZ/timespan/J44XKFJA> .
+
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/use_start/SDBX7RYZ/timespan/J44XKFJA> a crm:E52_Time-span ;
     crm:p82a_begin_of_the_begin "1500-01-01"^^xsd:date .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/use_start/PKRB8JK4/type/SV29QZ5P> a crm:E55_Type ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/use_start/SDBX7RYZ/type/357WVC38> a crm:E55_Type ;
     rdfs:label "Start Use"^^xsd:date .
 
-<https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/use_end/P34X98SG> a crm:E5_Event ;
+<https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/use_end/YEZTY3JJ> a crm:E5_Event ;
     rdfs:label "Religious"^^xsd:string ;
-    crm:p2_has_type <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/use_end/P34X98SG/type/R5RGV2PZ> ;
-    crm:p4_has_time-span <https://archipelago.itatti.harvard.edu/resource/built_work/M4HJS57K/use_end/P34X98SG/type/JRH9JUX5> .
+    crm:p2_has_type <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/use_end/YEZTY3JJ/type/NULQ95GA> ;
+    crm:p4_has_time-span <https://archipelago.itatti.harvard.edu/resource/built_work/TNE76QKG/use_end/YEZTY3JJ/type/VJEJNLB8> .
 
