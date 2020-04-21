@@ -162,6 +162,11 @@ def _add_bw(g, data):
     bw_prod_arch_type_uri = f'{bw_prod_arch_role_uri}/{key_uri_type}/{_id()}'
     bw_prod_arch_uri = f'{bw_prod_arch_role_uri}/{key_uri_architect}/{_id()}'
 
+    # patron
+    bw_prod_patron_role_uri = f'{bw_prod_uri}/{key_uri_patron}_role/{_id()}'
+    bw_prod_patron_type_uri = f'{bw_prod_patron_role_uri}/{key_uri_type}/{_id()}'
+    bw_prod_patron_uri = f'{bw_prod_patron_role_uri}/{key_uri_patron}/{_id()}'
+
     # owner 
     bw_owner_uri = f'{bw_uri}/{key_uri_owner}/{_id()}'
     bw_owner_acquisition_uri = f'{bw_uri}/{key_uri_acquisition}/{_id()}'
@@ -217,6 +222,10 @@ def _add_bw(g, data):
     bw_prod_arch_node = URIRef(bw_prod_arch_uri)
     bw_prod_arch_type_node = URIRef(bw_prod_arch_type_uri)
 
+    bw_prod_patron_role_node = URIRef(bw_prod_patron_role_uri)
+    bw_prod_patron_node = URIRef(bw_prod_patron_uri)
+    bw_prod_patron_type_node = URIRef(bw_prod_patron_type_uri)
+
     bw_owner_node = URIRef(bw_owner_uri)
     bw_owner_acquisition_node = URIRef(bw_owner_acquisition_uri)
     bw_owner_acquisition_time_node = URIRef(bw_owner_acquisition_time_uri)
@@ -224,7 +233,7 @@ def _add_bw(g, data):
     bw_tenant_node = URIRef(bw_tenant_uri)
     bw_tenant_transfer_node = URIRef(bw_tenant_transfer_uri)
     bw_tenant_transfer_time_node = URIRef(bw_tenant_transfer_time_uri)
-
+    
     # bw
     g.add( (bw_node, RDF.type, crm['E22_Man-made_Object']) )
 
@@ -378,9 +387,10 @@ def _add_bw(g, data):
 
     # bw architect
     if not pd.isnull(data[key_csv_architect]):
+        
+        g.add( (bw_prod_node, crm.p01_has_domain, bw_prod_arch_role_node) )
 
         g.add( (bw_prod_arch_role_node, RDF.type, crm.pc14_carried_out_by) )
-        g.add( (bw_prod_arch_role_node, crm.p01_has_domain, bw_prod_node) )
         g.add( (bw_prod_arch_role_node, crm.p02_has_range, bw_prod_arch_node) )
         g.add( (bw_prod_arch_role_node, crm.pc14_in_the_role_of, bw_prod_arch_role_node) )
 
@@ -389,6 +399,21 @@ def _add_bw(g, data):
 
         g.add( (bw_prod_arch_node, RDF.type, crm.E21_Person) )
         g.add( (bw_prod_arch_node, RDFS.label, Literal(data[key_csv_architect], datatype=XSD.string)) )
+
+    # bw patron
+    if not pd.isnull(data[key_csv_patron]):
+
+        g.add( (bw_prod_node, crm.p01_has_domain, bw_prod_patron_role_node) )
+        
+        g.add( (bw_prod_patron_role_node, RDF.type, crm.pc14_carried_out_by) )
+        g.add( (bw_prod_patron_role_node, crm.p02_has_range, bw_prod_patron_node) )
+        g.add( (bw_prod_patron_role_node, crm.pc14_in_the_role_of, bw_prod_patron_type_node) )
+
+        g.add( (bw_prod_patron_type_node, RDF.type, crm.E55_Type) )
+        g.add( (bw_prod_patron_type_node, RDFS.label, Literal(key_cat_patron, datatype=XSD.string)) )
+
+        g.add( (bw_prod_patron_node, RDF.type, crm.E21_Person) )
+        g.add( (bw_prod_patron_node, RDFS.label, Literal(data[key_csv_patron], datatype=XSD.string)) )
 
     #owner
     if not pd.isnull(data[key_csv_owner]):
