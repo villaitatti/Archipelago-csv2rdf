@@ -159,8 +159,9 @@ def _add_bw(g, data):
     bw_prod_arch_uri = f'{bw_prod_arch_role_uri}/{key_uri_architect}/{_id()}'
 
     # owner 
+    bw_owner_uri = f'{bw_uri}/{key_uri_owner}/{_id()}'
     bw_owner_acquisition_uri = f'{bw_uri}/{key_uri_acquisition}/{_id()}'
-    bw_owner_acquisition_time_uri = f'{bw_owner_acquisition_uri}/{key_uri_time}'
+    bw_owner_acquisition_time_uri = f'{bw_owner_acquisition_uri}/{key_uri_time}/{_id()}'
 
     # Nodes
     bw_node = URIRef(bw_uri)
@@ -206,6 +207,10 @@ def _add_bw(g, data):
     bw_prod_arch_role_node = URIRef(bw_prod_arch_role_uri)
     bw_prod_arch_node = URIRef(bw_prod_arch_uri)
     bw_prod_arch_type_node = URIRef(bw_prod_arch_type_uri)
+
+    bw_owner_node = URIRef(bw_owner_uri)
+    bw_owner_acquisition_node = URIRef(bw_owner_acquisition_uri)
+    bw_owner_acquisition_time_node = URIRef(bw_owner_acquisition_time_uri)
 
     # bw
     g.add( (bw_node, RDF.type, crm['E22_Man-made_Object']) )
@@ -374,8 +379,18 @@ def _add_bw(g, data):
 
     #owner
     if not pd.isnull(data[key_csv_owner]):
-        return
+    
+        g.add( (bw_node, crm.p24i_changed_ownership_through, bw_owner_acquisition_node) )
+        g.add( (bw_owner_acquisition_node, RDF.type, crm.E8_Acquisition) )
+        g.add( (bw_owner_acquisition_node, crm.p22_transferred_title_to, bw_owner_node) )
+        g.add( (bw_owner_acquisition_node, crm[p4_has_time], bw_owner_acquisition_time_node) )
 
+        g.add( (bw_owner_node, RDF.type, crm.E39_Actor) )
+        g.add( (bw_owner_node, RDFS.label, Literal(data[key_csv_owner], datatype=XSD.string)) )
+
+        g.add( (bw_owner_acquisition_time_node, RDF.type, Literal(crm[E52_Time], datatype=XSD.string)) )
+        g.add( (bw_owner_acquisition_time_node, crm.p82a_begin_of_the_begin, Literal(data[key_csv_owner_start], datatype=XSD.string))  )
+        g.add( (bw_owner_acquisition_time_node, crm.p82b_end_of_the_end, Literal(data[key_csv_owner_end], datatype=XSD.string)) )
 
     return g
 
